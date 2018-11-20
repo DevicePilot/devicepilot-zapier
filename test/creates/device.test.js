@@ -13,8 +13,29 @@ const testDevice = {
   longitude: 0.12,
 };
 
+const badDevice = {
+  bad: true,
+};
+
 describe('creates/device', () => {
   zapier.tools.env.inject();
+
+  it('should fail to create a device without an $id', (done) => {
+    const bundle = {
+      authData: {
+        apiKey: process.env.TEST_APIKEY,
+      },
+      inputData: {
+        data: badDevice,
+      },
+    };
+    appTester(App.creates.device.operation.perform, bundle)
+      .then((response) => {
+        should.exist(response.errors);
+        done();
+      })
+      .catch(done);
+  });
 
   it('should create a device', (done) => {
     const bundle = {
