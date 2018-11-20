@@ -12,6 +12,18 @@ To use the Zapier integration you must use your API key from the app. You can fi
 
 * **Create Device** - Sends device data to DevicePilot using a dictionary of fields, allowing the user to specify which fields they want to use.
 
+## Testing
+
+To run the unit tests, ensure that you have a `.env` file in the root directory with a valid DevicePilot API key, in the format:
+
+```
+TEST_APIKEY=0000000000000000
+```
+
+## Deploying
+
+To be able to deploy you will need to be authorised via `zapier login` and must be a contributor to the project.
+
 ## Documentation
 
 For more information about using DevicePilot, check out: https://help.devicepilot.com/.
