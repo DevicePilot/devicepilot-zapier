@@ -11,3 +11,7 @@ To use the Zapier integration you must use your API key from the app. You can fi
 ## Actions
 
 * **Create Device** - Sends device data to DevicePilot using a dictionary of fields, allowing the user to specify which fields they want to use.
+
+## Documentation
+
+For more information about using DevicePilot, check out: https://help.devicepilot.com/.
