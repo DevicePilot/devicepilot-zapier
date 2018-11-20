@@ -1,9 +1,7 @@
-
 const should = require('should');
-
 const zapier = require('zapier-platform-core');
-
 const App = require('../../index');
+
 const appTester = zapier.createAppTester(App);
 
 const testDevice = {
@@ -15,9 +13,7 @@ const testDevice = {
   longitude: 0.12,
 };
 
-//These are automated tests for the Issue create and Issue Trigger.
-//They will run every time the `zapier test` command is executed.
-describe('issue trigger', () => {
+describe('creates/device', () => {
   zapier.tools.env.inject();
 
   it('should create a device', (done) => {
@@ -31,9 +27,7 @@ describe('issue trigger', () => {
     };
     appTester(App.creates.device.operation.perform, bundle)
       .then((response) => {
-        if (response.errors) {
-          return done(new Error(response.errors));
-        }
+        should.not.exist(response.errors);
         done();
       })
       .catch(done);

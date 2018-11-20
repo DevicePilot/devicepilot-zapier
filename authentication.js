@@ -10,7 +10,7 @@ module.exports.auth = {
       type: 'string',
       required: true,
       helpText: 'This can be found on your settings page, or via the Getting Started wizard.',
-    }
+    },
   ],
 };
 

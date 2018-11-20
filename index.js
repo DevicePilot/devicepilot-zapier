@@ -1,12 +1,15 @@
+const { version: platformVersion } = require('zapier-platform-core');
+const { version } = require('./package.json');
 const authentication = require('./authentication');
 const createDevice = require('./creates/device');
+
 
 // We can roll up all our behaviors in an App.
 const App = {
   // This is just shorthand to reference the installed dependencies you have. Zapier will
   // need to know these before we can upload
-  version: require('./package.json').version,
-  platformVersion: require('zapier-platform-core').version,
+  version,
+  platformVersion,
 
   authentication: authentication.auth,
 
@@ -18,7 +21,8 @@ const App = {
   afterResponse: [
   ],
 
-  // If you want to define optional resources to simplify creation of triggers, searches, creates - do that here!
+  // If you want to define optional resources to simplify creation of triggers,
+  // searches, creates - do that here!
   resources: {
   },
 
@@ -33,7 +37,7 @@ const App = {
   // If you want your creates to show up, you better include it here!
   creates: {
     [createDevice.key]: createDevice,
-  }
+  },
 };
 
 // Finally, export the app.
