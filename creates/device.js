@@ -1,10 +1,14 @@
 const sample = require('../samples/sampleDevice');
 
 const createDevice = (z, bundle) => {
+  const body = {
+    $id: bundle.inputData.deviceId,
+    ...bundle.inputData.payload,
+  };
   const requestPromise = z.request({
     method: 'POST',
     url: 'https://api.devicepilot.com/devices',
-    body: JSON.stringify(bundle.inputData.data),
+    body,
   });
   return requestPromise
     .then(response => JSON.parse(response.content));
@@ -22,9 +26,15 @@ module.exports = {
   operation: {
     inputFields: [
       {
-        key: 'data',
-        label: 'Data',
-        helpText: 'The only required field is $id for the unique device identifier',
+        key: 'deviceId',
+        label: 'Device ID',
+        helpText: 'The unique identifier for the device',
+        required: true,
+      },
+      {
+        key: 'payload',
+        label: 'Payload',
+        helpText: 'The device data payload in key/value format',
         required: true,
         dict: true,
       },

@@ -744,6 +744,10 @@ normalize-package-data@^2.3.2:
     semver "2 || 3 || 4 || 5"
     validate-npm-package-license "^3.0.1"
 
+oauth-sign@0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
+
 object-assign@^4.0.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
@@ -1139,9 +1143,9 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-zapier-platform-core@7.4.0:
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/zapier-platform-core/-/zapier-platform-core-7.4.0.tgz#e383414518c56f1aed296d7a3255eab538f0f722"
+zapier-platform-core@7.5.0:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/zapier-platform-core/-/zapier-platform-core-7.5.0.tgz#410bf1fc1490cbce25791789f0f3666283e18bbd"
   dependencies:
     bluebird "3.5.0"
     content-disposition "0.5.2"
@@ -1149,14 +1153,15 @@ zapier-platform-core@7.4.0:
     form-data "2.3.2"
     lodash "4.17.10"
     node-fetch "1.7.1"
+    oauth-sign "0.9.0"
     semver "5.6.0"
-    zapier-platform-schema "7.4.0"
+    zapier-platform-schema "7.5.0"
   optionalDependencies:
     "@types/node" "8.10.20"
 
-zapier-platform-schema@7.4.0:
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/zapier-platform-schema/-/zapier-platform-schema-7.4.0.tgz#c796606636890511a60732b49bee39808ebd139c"
+zapier-platform-schema@7.5.0:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/zapier-platform-schema/-/zapier-platform-schema-7.5.0.tgz#b7083faaf8e5139731e3b3fdfad5af1cd16e5fe3"
   dependencies:
     jsonschema "1.1.1"
     lodash "4.17.10"

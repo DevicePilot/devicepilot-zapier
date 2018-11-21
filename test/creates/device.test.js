@@ -5,7 +5,6 @@ const App = require('../../index');
 const appTester = zapier.createAppTester(App);
 
 const testDevice = {
-  $id: 'test-device',
   now: Date.now(),
   currentTemperature: 20,
   targetTemperature: 21,
@@ -26,7 +25,7 @@ describe('creates/device', () => {
         apiKey: process.env.TEST_APIKEY,
       },
       inputData: {
-        data: badDevice,
+        payload: badDevice,
       },
     };
     appTester(App.creates.device.operation.perform, bundle)
@@ -43,7 +42,8 @@ describe('creates/device', () => {
         apiKey: process.env.TEST_APIKEY,
       },
       inputData: {
-        data: testDevice,
+        deviceId: 'test-device',
+        payload: testDevice,
       },
     };
     appTester(App.creates.device.operation.perform, bundle)
