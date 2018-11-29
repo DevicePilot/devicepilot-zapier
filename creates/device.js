@@ -19,7 +19,7 @@ module.exports = {
   noun: 'Device',
 
   display: {
-    label: 'Create Device',
+    label: 'Update Device Metadata',
     description: 'Send a device data point',
   },
 

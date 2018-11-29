@@ -1,5 +1,5 @@
 module.exports = {
-  $id: 'test-device',
+  id: 'test-device',
   now: Date.now(),
   currentTemperature: 20,
   targetTemperature: 21,
