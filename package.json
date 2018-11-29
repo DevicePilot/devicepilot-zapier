@@ -8,7 +8,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive",
+    "test": "mocha --recursive ./test/**/*.test.js",
     "lint": "eslint .",
     "deploy": "zapier push"
   },

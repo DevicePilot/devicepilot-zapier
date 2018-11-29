@@ -2,7 +2,7 @@ const { version: platformVersion } = require('zapier-platform-core');
 const { version } = require('./package.json');
 const authentication = require('./authentication');
 const createDevice = require('./creates/device');
-const triggerDevices = require('./triggers/devices');
+// const triggerDevices = require('./triggers/devices');
 
 // We can roll up all our behaviors in an App.
 const App = {
@@ -28,7 +28,7 @@ const App = {
 
   // If you want your trigger to show up, you better include it here!
   triggers: {
-    [triggerDevices.key]: triggerDevices,
+    // [triggerDevices.key]: triggerDevices,
   },
 
   // If you want your searches to show up, you better include it here!
